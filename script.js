@@ -107,3 +107,4 @@ percentage.addEventListener("click", (event) => {
     currentNumber = parseFloat(currentNumber) / 100;
     updateScreen(currentNumber);
 });
+
