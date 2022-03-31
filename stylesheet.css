@@ -1,7 +1,7 @@
 .profil {
     text-align: center;
     margin: 0 auto;
-    background-color: greenyellow;
+    background-color: orange;
     padding: 20px 0;
 }
 
@@ -68,3 +68,4 @@ button:hover {
 .operator:hover, .equal-sign:hover {
     background-color: darkorange;
 }
+
