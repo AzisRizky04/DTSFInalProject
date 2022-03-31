@@ -104,21 +104,6 @@ const inputDecimal = (dot) => {
 const percentage = document.querySelector(".percentage");
 
 percentage.addEventListener("click", (event) => {
-  inputPercentage(event.target.value);
-  updateScreen(currentNumber);
+    currentNumber = parseFloat(currentNumber) / 100;
+    updateScreen(currentNumber);
 });
-
-const inputPercentage = (percentage) => {
-  if (currentNumber.includes("%")) {
-    return;
-  }
-  var divided = currentNumber / 100;
-  console.log("divided", divided);
-  if (calculationOperator === "*" || calculationOperator === "/") {
-    console.log("x");
-    currentNumber = divided;
-  } else {
-    console.log("else", calculationOperator);
-    currentNumber = (currentNumber * prevNumber) / 100;
-  }
-};
