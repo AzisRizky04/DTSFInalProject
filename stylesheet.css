@@ -1,3 +1,22 @@
+.profil {
+    text-align: center;
+    margin: 0 auto;
+    background-color: greenyellow;
+    padding: 20px 0;
+}
+
+h1 {
+    padding-bottom: 5px; 
+    color: brown;
+    margin :0 auto;
+    font-size: 50px;
+}
+
+h2 {
+    color: #fff;
+    font-size: 45px;
+}
+
 .calculator {
     text-align: center;
     margin: 0 auto;
