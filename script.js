@@ -1,8 +1,8 @@
-//Numbers
 const numbers = document.querySelectorAll(".number");
 
 numbers.forEach((number) => {
     number.addEventListener("click", (event) => {
+        console.log("number is pressed");
         inputNumber(event.target.value);
         updateScreen(currentNumber);
     })
@@ -26,16 +26,7 @@ const inputNumber = (number) => {
     }
 };
 
-//Operators
 const operators = document.querySelectorAll(".operator");
-
-const inputOperator = (operator) => {
-    if(calculationOperator === "") {
-        prevNumber = currentNumber;
-    }
-    calculationOperator = operator;
-    currentNumber = "0";
-};
 
 operators.forEach((operator) => {
     operator.addEventListener("click", (event) => {
@@ -43,8 +34,22 @@ operators.forEach((operator) => {
     })
 });
 
-//Equal & Calculate
+const inputOperator = (operator) => {
+    if(calculationOperator === "") {
+        prevNumber = currentNumber;
+    }
+    calculationOperator = operator;
+    currentNumber = "";
+};
+
 const equalSign = document.querySelector(".equal-sign");
+
+equalSign.addEventListener("click", () => {
+    console.log("equal button is pressed");
+    calculate();
+    console.log(currentNumber);
+    updateScreen(currentNumber);
+});
 
 const calculate = () => {
     let result = "";
@@ -68,15 +73,11 @@ const calculate = () => {
     calculationOperator = "";
 };
 
-equalSign.addEventListener("click", () => {
-    calculate();
-    updateScreen(currentNumber);
-});
-
-//ClearAll
 const clearBtn = document.querySelector(".all-clear");
 
 clearBtn.addEventListener("click", () => {
+    clearAll();
+    updateScreen(currentNumber);
     console.log("AC button is pressed");
 });
 
@@ -86,24 +87,14 @@ const clearAll = () => {
     currentNumber = "0";
 };
 
-clearBtn.addEventListener("click", () => {
-    clearAll();
-    updateScreen(currentNumber);
-});
-
-//Decimal
 const decimal = document.querySelector(".decimal");
-
-inputDecimal = (dot) => {
-    currentNumber += dot;
-};
 
 decimal.addEventListener("click", (event) => {
     inputDecimal(event.target.value);
     updateScreen(currentNumber);
 });
 
-inputDecimal = (dot) => {
+const inputDecimal = (dot) => {
     if (currentNumber.includes(".")) {
         return;
     }
