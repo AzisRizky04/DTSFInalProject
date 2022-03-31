@@ -7,7 +7,8 @@
 
 h1 {
     padding-bottom: 5px; 
-    color: brown;
+    color: #fff;
+    color: ;
     margin :0 auto;
     font-size: 50px;
 }
@@ -68,4 +69,3 @@ button:hover {
 .operator:hover, .equal-sign:hover {
     background-color: darkorange;
 }
-
