@@ -4,7 +4,6 @@ const numbers = document.querySelectorAll(".number");
 numbers.forEach((number) => {
     number.addEventListener("click", (event) => {
         inputNumber(event.target.value);
-        console.log("number is pressed");
         updateScreen(currentNumber);
     })
 });
@@ -46,10 +45,6 @@ operators.forEach((operator) => {
 
 //Equal & Calculate
 const equalSign = document.querySelector(".equal-sign");
-
-equalSign.addEventListener("click", () => {
-    console.log("equal button is pressed");
-});
 
 const calculate = () => {
     let result = "";
